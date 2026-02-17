@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login Page</title>
+</head>
+<body>
+<div class="login-box">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username"><br><br>
+    <input type="password" id="password" placeholder="Password"><br><br>
+    <button onclick="login()">Login</button>
+    <div id="message" class="message"></div>
+</div>
+<script>
+    function login() {
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+    let messageDiv = document.getElementById("message");
+    if (username === "admin" && password === "123456") {
+        messageDiv.style.color = "green";
+        messageDiv.textContent = "Login successful!";
+    } else {
+        messageDiv.style.color = "red";
+        messageDiv.textContent = "Invalid username or password!";
+    }
+}
+</script>
+
+</body>
+</html>
